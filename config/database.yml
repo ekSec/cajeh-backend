@@ -2,17 +2,17 @@ default: &default
   adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
-  username: postgres
-  password: postgres
+  username: user
+  #password: postgres
 
 development:
   <<: *default
-  database: cajeh_form_dev
+  database: cajeh_dev
 
 test:
   <<: *default
-  database: cajeh_form_test
+  database: cajeh_test
 
 production:
   <<: *default
-  database: cajeh_form_prod
+  database: cajeh_prod
